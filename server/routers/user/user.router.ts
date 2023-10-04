@@ -2,7 +2,7 @@ import express, { RequestHandler } from 'express';
 import {
   validateLogInFormInputs,
   validateSignUpFormInputs,
-} from '../../middleware/validateSignUpFormInputs.ts';
+} from '../../middleware/validateUserInput.ts';
 import { createUser, getUser } from './user.controller.ts';
 export const router = express.Router();
 
