@@ -32,7 +32,6 @@ export const store = configureStore({
   },
   middleware: (getDefaultMiddlewares) => [
     ...getDefaultMiddlewares({ thunk: true }),
-    logger,
   ],
 });
 

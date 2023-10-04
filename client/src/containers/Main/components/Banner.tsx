@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import watch from '../../../assets/bannerImages/watch.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
+import { images } from '../../../assets';
 const Banner = () => {
   return (
     <section className="bg-lightWhite">
@@ -45,8 +46,8 @@ const Banner = () => {
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="bg-[url('./src/assets/bannerImages/Your-One-Stop-Tech-Shop.jpeg')]  bg-center text-white">
-            <div className="max-w-screen-xl  h-[50vh] min-h-[500px] mx-auto flex items-center overflow-hidden px-10 relative ">
+          <div className=" text-white relative">
+            <div className="max-w-screen-xl  h-[50vh] min-h-[500px] mx-auto flex items-center overflow-hidden px-10  z-[2] relative">
               {/* left side */}
               <div className="flex-1 text-center lg:text-left z-10">
                 <h1 className="uppercase text-5xl lg:text-7xl font-light leading-tight  ">
@@ -63,12 +64,17 @@ const Banner = () => {
               {/* right side */}
               <div className="flex-1 mt-28  hidden lg:block  "></div>
             </div>
+            <img
+              className="absolute top-0 left-0 bottom-0 right-0 h-full w-full object-cover z-[1]"
+              src={images.bannerImage2}
+              alt="banner image"
+            />
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="bg-[url('./src/assets/bannerImages/Tech-Essentials-Await-You.jpeg')] bg-center  bg-cover text-white">
-            <div className="max-w-screen-xl  h-[50vh] min-h-[500px] mx-auto flex items-center overflow-hidden px-10 relative ">
+          <div className=" text-white">
+            <div className="max-w-screen-xl  h-[50vh] min-h-[500px] mx-auto flex items-center overflow-hidden px-10 relative z-[2] ">
               {/* left side */}
               <div className="flex-1 text-center lg:text-left z-10">
                 <h1 className="uppercase text-5xl lg:text-7xl font-light leading-tight  ">
@@ -85,6 +91,11 @@ const Banner = () => {
               {/* right side */}
               <div className="flex-1 mt-28  hidden lg:block  "></div>
             </div>
+            <img
+              className="absolute top-0 left-0 bottom-0 right-0 h-full w-full object-cover z-[1]"
+              src={images.bannerImage1}
+              alt="banner image"
+            />
           </div>
         </SwiperSlide>
       </Swiper>
