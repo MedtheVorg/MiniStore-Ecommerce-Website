@@ -41,10 +41,6 @@ import XiaomiSmartPack from './accessoriesImages/Xiaomi-smart-pack.jpeg';
 import allYouNeed2023Pack from './accessoriesImages/all-you-need-2023-pack.jpeg';
 import screenPostEssentialPack from './accessoriesImages/screen-post-essential-pack.jpeg';
 
-// banner
-import bannerImage1 from './bannerImages/Tech-Essentials-Await-You.jpg';
-import bannerImage2 from './bannerImages/Your-One-Stop-Tech-Shop.jpeg';
-
 export const images = {
   ArialElegant,
   GalaxyPro,
@@ -81,6 +77,4 @@ export const images = {
   XiaomiSmartPack,
   allYouNeed2023Pack,
   screenPostEssentialPack,
-  bannerImage1,
-  bannerImage2,
 };

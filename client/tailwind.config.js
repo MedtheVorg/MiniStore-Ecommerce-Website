@@ -5,7 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         banner1:
-          "url('./src/assets/bannerImages/Tech-Essentials-Await-You.jpg')",
+          "url('./src/assets/bannerImages/Tech-Essentials-Await-You.jpeg')",
         banner2:
           "url('./src/assets/bannerImages/Your-One-Stop-Tech-Shop.jpeg')",
       },

@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import watch from '../../../assets/bannerImages/watch.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay, Pagination } from 'swiper/modules';
-import { images } from '../../../assets';
+import { Autoplay, Pagination } from 'swiper/modules';
 const Banner = () => {
   return (
     <section className="bg-lightWhite">
@@ -46,9 +45,7 @@ const Banner = () => {
         </SwiperSlide>
 
         <SwiperSlide>
-          <div
-            className={`bg-[url('${images.bannerImage1}')] bg-center text-white`}
-          >
+          <div className={`bg-banner1  bg-center text-white`}>
             <div className="max-w-screen-xl  h-[50vh] min-h-[500px] mx-auto flex items-center overflow-hidden px-10 relative ">
               {/* left side */}
               <div className="flex-1 text-center lg:text-left z-10">
