@@ -2,8 +2,8 @@ import express, { RequestHandler } from 'express';
 import {
   validateLogInFormInputs,
   validateSignUpFormInputs,
-} from '../../middleware/validateUserInput.ts';
-import { createUser, getUser } from './user.controller.ts';
+} from '../../middleware/validateUserInput.js';
+import { createUser, getUser } from './user.controller.js';
 export const router = express.Router();
 
 router.post('/signup', validateSignUpFormInputs as RequestHandler, createUser);

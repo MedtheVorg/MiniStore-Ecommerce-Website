@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import Logger from '../utils/Logger.ts';
+import Logger from '../utils/Logger.js';
 export default function requestLogger(
   req: Request,
   res: Response,
