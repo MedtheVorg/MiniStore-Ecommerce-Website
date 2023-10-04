@@ -5,7 +5,8 @@
   "main": "./index.ts",
   "type": "module",
   "scripts": {
-    "server": "nodemon"
+    "server": "nodemon",
+    "vercel-build": "echo hello"
   },
   "author": "mohamed lemaallaoui",
   "license": "ISC",
