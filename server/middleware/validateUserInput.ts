@@ -1,6 +1,6 @@
 import { Response, NextFunction } from 'express';
-import { CustomRequest } from '../lib/types.js';
-import { logInSchema, signUpSchema } from '../lib/schemas.js';
+import { CustomRequest } from '../lib/types.ts';
+import { logInSchema, signUpSchema } from '../lib/schemas.ts';
 
 export function validateSignUpFormInputs(
   req: CustomRequest,

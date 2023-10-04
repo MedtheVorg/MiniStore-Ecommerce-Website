@@ -1,7 +1,7 @@
 import express, { NextFunction, Request, Response } from 'express';
 import mongoose from 'mongoose';
-import { apiConfig } from './config/serverConfig.js';
-import { router as userRouter } from './routers/user/user.router.js';
+import { apiConfig } from './config/serverConfig.ts';
+import { router as userRouter } from './routers/user/user.router.ts';
 import cors from 'cors';
 
 //express async handler Wrapper
@@ -9,8 +9,8 @@ import cors from 'cors';
 //to the express error handler middleware unless an error is thrown intentionally
 import 'express-async-errors';
 //custom Logger
-import Logger from './utils/Logger.js';
-import requestLogger from './utils/requestLogger.js';
+import Logger from './utils/Logger.ts';
+import requestLogger from './utils/requestLogger.ts';
 
 const app = express();
 
