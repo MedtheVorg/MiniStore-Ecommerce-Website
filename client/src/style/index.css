@@ -1218,12 +1218,20 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\$\{images\.bannerImage1\}\'\)\]{
-  background-image: url('${images.bannerImage1}');
+.bg-\[url\(\"\.\/src\/assets\/bannerImages\/Tech-Essentials-Await-You\.jpeg\"\)\]{
+  background-image: url("./src/assets/bannerImages/Tech-Essentials-Await-You.jpeg");
 }
 
 .bg-banner1{
-  background-image: url('./src/assets/bannerImages/Tech-Essentials-Await-You.jpg');
+  background-image: url('./src/assets/bannerImages/Tech-Essentials-Await-You.jpeg');
+}
+
+.bg-\[url\(\'\.\/src\/assets\/bannerImages\/Tech-Essentials-Await-You\.jpeg\'\)\]{
+  background-image: url('./src/assets/bannerImages/Tech-Essentials-Await-You.jpeg');
+}
+
+.bg-\[url\(\'\.\/src\/assets\/bannerImages\/Your-One-Stop-Tech-Shop\.jpeg\'\)\]{
+  background-image: url('./src/assets/bannerImages/Your-One-Stop-Tech-Shop.jpeg');
 }
 
 .bg-cover{
