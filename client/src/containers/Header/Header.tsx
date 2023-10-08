@@ -26,7 +26,7 @@ const Header: React.FC = () => {
   }
 
   return (
-    <header className="  bg-white z-10 shadow-2xl border-b-[2px] ">
+    <header className="  bg-white z-10 shadow-md border-b-[2px] ">
       {/* LOGO */}
       <div className="max-w-screen-xl mx-auto p-2 md:flex md:justify-between md:items-center gap-4   relative  ">
         <div className="flex justify-between ">

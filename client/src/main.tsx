@@ -16,16 +16,17 @@ import { PersistGate } from 'redux-persist/integration/react';
 import HomeLoader from './components/HomeLoader.tsx';
 const queryClient = new QueryClient();
 
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <ReduxProvider store={store}>
-        <PersistGate persistor={storePersistor} loading={<HomeLoader />}>
-          <Router>
-            <App />
-          </Router>
-        </PersistGate>
-      </ReduxProvider>
-    </QueryClientProvider>
+      <QueryClientProvider client={queryClient}>
+        <ReduxProvider store={store}>
+          <PersistGate persistor={storePersistor} loading={<HomeLoader />}>
+            <Router>
+              <App />
+            </Router>
+          </PersistGate>
+        </ReduxProvider>
+      </QueryClientProvider>
   </React.StrictMode>
 );

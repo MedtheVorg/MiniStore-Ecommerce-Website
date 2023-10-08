@@ -33,8 +33,8 @@ const SearchBar = () => {
   }, [searchTerm]);
 
   return (
-    <div className=" bg-[#F5F5F3] p-2  ">
-      <div className="relative md:max-w-[50vw] mx-auto px-2">
+    <div className=" bg-[#F5F5F3] p-2   ">
+      <div className="relative md:max-w-[50vw] mx-auto px-2 md:px-0">
         <form
           className=" items-center   relative  flex  flex-1  "
           onSubmit={(e: FormEvent<HTMLFormElement>) => {

@@ -30,9 +30,7 @@ export const store = configureStore({
     userState: userPersistedReducer,
     cartState: cartPersistedReducer,
   },
-  middleware: (getDefaultMiddlewares) => [
-    ...getDefaultMiddlewares({ thunk: true }),
-  ],
+  middleware: (getDefaultMiddlewares) => [...getDefaultMiddlewares()],
 });
 
 export let storePersistor = persistStore(store);

@@ -11,7 +11,7 @@ import ErrorPage from '../../pages/error/ErrorPage.tsx';
 import ProductPage from '../../pages/productPage/ProductPage.tsx';
 import CartPage from '../../pages/cartPage/CartPage.tsx';
 import CheckOutPage from '../../pages/checkoutPage/CheckOutPage.tsx';
-import BlogsPage from '../../pages/BlogsPage.tsx';
+import BlogsPage from '../../pages/blogsPage/BlogsPage.tsx';
 import LogInPage from '../../pages/LogInPage.tsx';
 import SignUpPage from '../../pages/SignUpPage.tsx';
 import { StoreType } from '../../redux/reduxStore.ts';
@@ -19,6 +19,7 @@ import { useSelector } from 'react-redux';
 import ProfilePage from '../../pages/ProfilePage.tsx';
 import { AnimatePresence } from 'framer-motion';
 import FramerMotionWrapper from '../../components/FramerMotionWrapper.tsx';
+import BlogPage from '../../pages/blogsPage/BlogPage.tsx';
 
 const Main = () => {
   const user = useSelector((state: StoreType) => state.userState.user);
@@ -103,6 +104,14 @@ const Main = () => {
             element={
               <FramerMotionWrapper>
                 <BlogsPage />
+              </FramerMotionWrapper>
+            }
+          />
+          <Route
+            path="blogs/:id"
+            element={
+              <FramerMotionWrapper>
+                <BlogPage />
               </FramerMotionWrapper>
             }
           />

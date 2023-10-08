@@ -14,7 +14,7 @@ const Nav = ({ setIsOpen }: NavProps) => {
       <ul className=" uppercase md:flex items-center gap-8">
         <li
           className="block  mt-2 py-2  hover:bg-semiBlue  md:hover:bg-transparent hover:px-2 md:hover:px-0 hover:text-white md:hover:text-dark transition-all  md:hover:underline md:hover:decoration-2   md:hover:underline-offset-4 "
-          onClick={() => setIsOpen((prev) => !prev)}
+          onClick={() => setIsOpen(false)}
         >
           <NavLink
             to={'/'}
@@ -30,8 +30,8 @@ const Nav = ({ setIsOpen }: NavProps) => {
         <li
           className=" block  mt-2 py-2   hover:bg-semiBlue md:hover:bg-transparent hover:px-2 md:hover:px-0 hover:text-white md:hover:text-dark transition-all  md:hover:underline md:hover:decoration-2   md:hover:underline-offset-4  "
           onClick={() => {
-            setIsOpen((prev) => !prev);
-            setIsActive((prev) => !prev);
+            setIsOpen(false);
+            setIsActive(false);
           }}
         >
           <NavLink
@@ -47,7 +47,7 @@ const Nav = ({ setIsOpen }: NavProps) => {
         </li>
         <li
           className="block  mt-2 py-2   hover:bg-semiBlue md:hover:bg-transparent hover:px-2 md:hover:px-0 hover:text-white md:hover:text-dark transition-all  md:hover:underline md:hover:decoration-2   md:hover:underline-offset-4 "
-          onClick={() => setIsOpen((prev) => !prev)}
+          onClick={() => setIsOpen(false)}
         >
           <NavLink
             to={'/about'}
@@ -62,7 +62,7 @@ const Nav = ({ setIsOpen }: NavProps) => {
         </li>
         <li
           className="block  mt-2 py-2   hover:bg-semiBlue md:hover:bg-transparent hover:px-2 md:hover:px-0 hover:text-white md:hover:text-dark transition-all  md:hover:underline md:hover:decoration-2   md:hover:underline-offset-4 "
-          onClick={() => setIsOpen((prev) => !prev)}
+          onClick={() => setIsOpen(false)}
         >
           <NavLink
             to={'/blogs'}
@@ -77,7 +77,7 @@ const Nav = ({ setIsOpen }: NavProps) => {
         </li>
         <li
           className="block  mt-2 py-2   hover:bg-semiBlue md:hover:bg-transparent hover:px-2 md:hover:px-0 hover:text-white md:hover:text-dark transition-all  md:hover:underline md:hover:decoration-2   md:hover:underline-offset-4 "
-          onClick={() => setIsOpen((prev) => !prev)}
+          onClick={() => setIsOpen(false)}
         >
           <NavLink
             to={'/contact'}

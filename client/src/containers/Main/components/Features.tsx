@@ -2,6 +2,7 @@ import { BsCart3 } from 'react-icons/bs';
 import { SlBadge } from 'react-icons/sl';
 import { MdOutlineLocalOffer } from 'react-icons/md';
 import { GoShieldCheck } from 'react-icons/go';
+
 const Features = () => {
   return (
     <section className="max-w-screen-xl mx-auto">

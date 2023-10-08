@@ -20,9 +20,7 @@ connectMongoDb();
 function startServer() {
   // express middlewares
   app.use(express.json());
-  app.use(
-    cors({ origin: 'https://mini-store-ecommerce-website-iota.vercel.app/' })
-  );
+  app.use(cors({ origin: process.env.ORIGIN }));
 
   //Request  / response Logger
   app.use(requestLogger);

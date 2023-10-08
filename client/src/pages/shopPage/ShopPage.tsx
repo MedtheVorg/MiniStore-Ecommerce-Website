@@ -51,8 +51,8 @@ const ShopPage: FC = () => {
           />
           <Pagination
             setCurrentPage={setCurrentPage}
-            productsPerPage={productsPerPage}
-            totalProducts={shopProducts.length}
+            itemsPerPage={productsPerPage}
+            totalItems={shopProducts.length}
             currentPage={currentPage}
           />
         </div>

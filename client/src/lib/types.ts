@@ -33,6 +33,7 @@ export type CartProduct = {
 export interface SliderProps {
   title: string;
   products?: TProduct[];
+  blogs?: TBlog[];
   filter?: string | undefined;
 }
 
@@ -56,4 +57,13 @@ export type CartInitialState = {
 
 export type UserInitialState = {
   user: User | null;
+};
+
+export type TBlog = {
+  id: number;
+  title: string;
+  publishedAt: Date;
+  category: string;
+  content?: string;
+  image?: string;
 };

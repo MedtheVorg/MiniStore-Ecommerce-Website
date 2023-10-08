@@ -1,23 +1,23 @@
 import { Link } from 'react-router-dom';
 import watch from '../../../assets/bannerImages/watch.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay, Pagination, A11y } from 'swiper/modules';
 import { images } from '../../../assets';
 const Banner = () => {
   return (
     <section className="bg-lightWhite">
       <Swiper
-        modules={[Autoplay, Pagination]}
+        modules={[Autoplay, Pagination, A11y]}
         slidesPerView={1}
         pagination={{ clickable: true }}
-        // autoplay={{
-        //   stopOnLastSlide: false,
-        //   disableOnInteraction: false,
-        //   pauseOnMouseEnter: true,
-        //   reverseDirection: false,
-        // }}
+        autoplay={{
+          stopOnLastSlide: false,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+          reverseDirection: false,
+        }}
         loop={true}
-        speed={3000}
+        speed={2000}
       >
         <SwiperSlide>
           <div className="max-w-screen-xl  h-[50vh] min-h-[500px] mx-auto flex items-center overflow-hidden px-10 ">

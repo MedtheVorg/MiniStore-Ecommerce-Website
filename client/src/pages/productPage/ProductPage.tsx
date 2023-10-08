@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import phones from '../../data/phones';
 import watches from '../../data/watches';
 import accessories from '../../data/accessories';
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { addToCart } from '../../redux/cart/cartSlice';
 import { toast } from 'react-toastify';
@@ -19,6 +19,10 @@ const ProductPage = () => {
   const currentProduct = shopData.find((product) => product.id === Number(id));
 
   const dispatch = useDispatch();
+
+  if (!currentProduct) {
+    return <Navigate to={'/'} />;
+  }
 
   return (
     <div className="max-w-screen-xl mx-auto font-lato flex flex-col ">
