@@ -5,12 +5,12 @@ import watches from '../../data/watches';
 import accessories from '../../data/accessories';
 import { Navigate, useParams } from 'react-router-dom';
 import { useState } from 'react';
-import { addToCart } from '../../redux/cart/cartSlice';
 import { toast } from 'react-toastify';
 import Slider from '../../containers/Main/components/Slider';
 import { motion } from 'framer-motion';
 import AdditionalInfo from './components/AdditionalInfo';
 import tablets from '../../data/tablets';
+import { addToCart } from '../../reduxStore/features/cart/cartSlice';
 
 const ProductPage = () => {
   const [quantity, setQuantity] = useState(1);

@@ -28,6 +28,14 @@ UserSchema.pre('save', async function (next) {
   next();
 });
 
+UserSchema.pre('updateOne', async function (next) {
+  const saltRounds = 12;
+  const salt = await bcrypt.genSalt(saltRounds);
+  const hashedPassword = await bcrypt.hash(this.get('password'), salt);
+  this.set('password', hashedPassword);
+
+  next();
+});
 // validate password provided by the client
 // UserSchema.method(
 //   'comparePasswords',

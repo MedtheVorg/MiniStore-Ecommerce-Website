@@ -14,12 +14,12 @@ import CheckOutPage from '../../pages/checkoutPage/CheckOutPage.tsx';
 import BlogsPage from '../../pages/blogsPage/BlogsPage.tsx';
 import LogInPage from '../../pages/LogInPage.tsx';
 import SignUpPage from '../../pages/SignUpPage.tsx';
-import { StoreType } from '../../redux/reduxStore.ts';
 import { useSelector } from 'react-redux';
 import ProfilePage from '../../pages/ProfilePage.tsx';
 import { AnimatePresence } from 'framer-motion';
 import FramerMotionWrapper from '../../components/FramerMotionWrapper.tsx';
 import BlogPage from '../../pages/blogsPage/BlogPage.tsx';
+import { StoreType } from '../../reduxStore/store.ts';
 
 const Main = () => {
   const user = useSelector((state: StoreType) => state.userState.user);

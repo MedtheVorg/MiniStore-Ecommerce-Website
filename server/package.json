@@ -1,22 +1,14 @@
 {
-  "name": "api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "./index.ts",
-  "type": "module",
-  "scripts": {
-    "server": "nodemon",
-    "vercel-build": "echo hello"
-  },
   "author": "mohamed lemaallaoui",
-  "license": "ISC",
   "dependencies": {
     "@types/bcrypt": "^5.0.0",
+    "@types/cookie-parser": "^1.4.4",
     "@types/cors": "^2.8.14",
     "@types/jsonwebtoken": "^9.0.3",
     "@types/validator": "^13.11.2",
     "bcrypt": "^5.1.1",
     "chalk": "^5.3.0",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
@@ -27,7 +19,17 @@
     "ts-node": "^10.9.1",
     "zod": "^3.22.3"
   },
+  "description": "",
   "devDependencies": {
     "@types/express": "^4.17.17"
-  }
+  },
+  "license": "ISC",
+  "main": "./index.ts",
+  "name": "api",
+  "scripts": {
+    "server": "nodemon",
+    "vercel-build": "echo hello"
+  },
+  "type": "module",
+  "version": "1.0.0"
 }

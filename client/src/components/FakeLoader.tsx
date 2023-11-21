@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { resetCart } from '../redux/cart/cartSlice';
+import { resetCart } from '../reduxStore/features/cart/cartSlice';
 const FakeLoader = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();

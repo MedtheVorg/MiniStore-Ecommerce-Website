@@ -2,8 +2,8 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { CartProduct, TProduct } from '../lib/types';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../redux/cart/cartSlice';
 import { toast } from 'react-toastify';
+import { addToCart } from '../reduxStore/features/cart/cartSlice';
 
 const Product = ({ data }: { data: TProduct }) => {
   const { id, title, description, image, price, stock } = data;

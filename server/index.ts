@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import { apiConfig } from './config/serverConfig.js';
 import { router as userRouter } from './routers/user/user.router.js';
 import cors from 'cors';
+import cookieParser from 'cookie-parser';
 
 //express async handler Wrapper
 // this basically wraps all async middlewares with a try catch block and passes the error
@@ -20,7 +21,8 @@ connectMongoDb();
 function startServer() {
   // express middlewares
   app.use(express.json());
-  app.use(cors({ origin: process.env.ORIGIN }));
+  app.use(cookieParser());
+  app.use(cors({ origin: process.env.ORIGIN, credentials: true }));
 
   //Request  / response Logger
   app.use(requestLogger);

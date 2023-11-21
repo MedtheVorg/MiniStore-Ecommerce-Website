@@ -18,7 +18,7 @@ const Layout = () => {
     <>
       <Header />
       <Main />
-      <Footer />
+      {/* <Footer /> */}
       <ScrollToTop />
       <ShoppingCart />
       <GoToTheTop />

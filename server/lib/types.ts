@@ -34,3 +34,16 @@ import { z } from 'zod';
 
 export type TSignUpSchema = z.infer<typeof signUpSchema>;
 export type TLogInSchema = z.infer<typeof logInSchema>;
+
+export type TUser = {
+  username?: string;
+  email?: string;
+  password?: string;
+  confirmPassword?: string;
+};
+
+export type decodedUserToken = {
+  _id: string;
+  email: string;
+  username: string;
+};

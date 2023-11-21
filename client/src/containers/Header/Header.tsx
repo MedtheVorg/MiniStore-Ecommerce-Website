@@ -6,9 +6,12 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { CartProduct } from '../../lib/types';
 import Avatar from 'boring-avatars';
-import { StoreType } from '../../redux/reduxStore';
-import { logoutUser } from '../../redux/user/userSlice';
 import SearchBar from './components/SearchBar';
+import { StoreType } from '../../reduxStore/store';
+import { logoutUser } from '../../reduxStore/features/user/userSlice';
+import { resetCart } from '../../reduxStore/features/cart/cartSlice';
+import { logOutUser } from '../../axios/axiosConfig';
+import { toast } from 'react-toastify';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -19,10 +22,16 @@ const Header: React.FC = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  function handleLogOutUser() {
-    dispatch(logoutUser());
-    setIsOpen(false);
-    navigate('/');
+  async function handleLogOutUser() {
+    const isLoggedOut = await logOutUser();
+    if (isLoggedOut) {
+      navigate('/');
+      dispatch(logoutUser());
+      dispatch(resetCart());
+      setIsOpen(false);
+    } else {
+      toast.error('Something went wrong :/');
+    }
   }
 
   return (

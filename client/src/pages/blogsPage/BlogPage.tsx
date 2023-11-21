@@ -3,13 +3,14 @@ import { Navigate, useParams } from 'react-router-dom';
 // fakeData
 import { blogsData } from '../../data/blogs';
 import Slider from '../../containers/Main/components/Slider';
+import logIt from '../../lib/logIt';
 
 const BlogPage = () => {
   const params = useParams();
   const blog = blogsData.find((blg) => blg.id === Number(params.id));
 
   if (!blog) {
-    console.log(blog);
+    logIt(blog);
     return <Navigate to={'/'} />;
   }
   const { id, category, image, publishedAt, title } = blog;

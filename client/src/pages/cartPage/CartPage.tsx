@@ -1,12 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
 import History from '../../containers/Main/components/History';
-import { StoreType } from '../../redux/reduxStore';
 import { Link } from 'react-router-dom';
 import emptyCartImage from '../../assets/emptyCart.png';
 import CartItem from './components/CartItem';
-import { resetCart } from '../../redux/cart/cartSlice';
 import CartTotal from './components/CartTotal';
 import { motion } from 'framer-motion';
+import { StoreType } from '../../reduxStore/store';
+import { resetCart } from '../../reduxStore/features/cart/cartSlice';
+import { CartProduct, TProduct } from '../../lib/types';
 
 const CartPage = () => {
   const cart = useSelector((state: StoreType) => state.cartState);
@@ -50,7 +51,7 @@ const CartPage = () => {
           </div>
           {/* table content */}
           <div className="p-2 md:p-0">
-            {cart.products.map((product, index) => (
+            {cart.products.map((product: CartProduct) => (
               <CartItem product={product} key={product.id} />
             ))}
           </div>

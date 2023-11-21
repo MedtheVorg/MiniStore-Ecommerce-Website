@@ -1,13 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { CartProduct } from '../../../lib/types';
-import { StoreType } from '../../../redux/reduxStore';
 import { AiOutlineClose } from 'react-icons/ai';
 
 import {
   decrementItemQuantity,
   deleteItem,
   incrementItemQuantity,
-} from '../../../redux/cart/cartSlice';
+} from '../../../reduxStore/features/cart/cartSlice';
+import { StoreType } from '../../../reduxStore/store';
 
 const CartItem = ({ product }: { product: CartProduct }) => {
   const cart = useSelector((state: StoreType) => state.cartState);

@@ -10,7 +10,7 @@ import { getUser } from '../axios/axiosConfig';
 import { useRef } from 'react';
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
-import { loginUser } from '../redux/user/userSlice';
+import { loginUser } from '../reduxStore/features/user/userSlice';
 
 // abort controller for aborting requests made by the client
 let abortController = new AbortController();
@@ -36,7 +36,6 @@ const LogInPage = () => {
     try {
       abortController.current.abort();
       abortController.current = new AbortController();
-      await new Promise((resolve) => setTimeout(resolve, 1000));
       mutate(userInputData, {
         onSuccess: (result) => {
           if (result.success) {

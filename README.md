@@ -33,7 +33,7 @@
 ## To do
 -  add orders history to profile page
 - add an admin panel to manage products on the store
-- add blogs page and  individual blog page
+
 
 
 ## Live preview

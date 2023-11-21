@@ -15,15 +15,13 @@ const SignUpPage = () => {
   // abort controller for aborting requests made by the client
   const abortController = useRef(new AbortController());
 
-  const [first, setfirst] = useState(false);
-
   // react form hook (useForm hook)
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<TSignUpSchema>({
-    resolver: zodResolver(signUpSchema),
+    resolver: zodResolver(signUpSchema.optional()),
   });
 
   // useMutation hook from react query for CRUD operations
@@ -62,7 +60,7 @@ const SignUpPage = () => {
   return (
     <div className="bg-lightWhite   flex  justify-center px-4">
       <form
-        className="bg-white p-8 max-w-[500px] w-full shadow-lg my-16 h-fit rounded-lg border-2"
+        className="bg-white p-4 lg:p-8 py-8 max-w-[500px] w-full shadow-lg my-16 rounded-lg border-2"
         onSubmit={handleSubmit(signUp)}
       >
         <h1 className="font-semibold text-5xl text-center">Sign Up</h1>
@@ -70,45 +68,61 @@ const SignUpPage = () => {
           Please fill the form below to create an account
         </p>
         <div className="flex flex-col gap-4 my-8">
-          <input
-            {...register('username')}
-            type="text"
-            name="username"
-            id="username"
-            placeholder="Username"
-            className="p-4 border-2 focus:outline-semiBlue text-xl"
-          />
-          <ErrorMessage errorObject={errors} target="username" />
+          <div className="flex flex-col">
+            <input
+              {...register('username')}
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Username"
+              className="p-2 border-2 focus:outline-semiBlue "
+            />
+            <div className="h-8">
+              <ErrorMessage errorObject={errors} target="username" />
+            </div>
+          </div>
 
-          <input
-            {...register('email')}
-            type="text"
-            name="email"
-            id="email"
-            placeholder="Email address"
-            className="p-4 border-2 focus:outline-semiBlue text-xl"
-          />
-          <ErrorMessage errorObject={errors} target="email" />
+          <div className="flex flex-col">
+            <input
+              {...register('email')}
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Email address"
+              className="p-4 border-2 focus:outline-semiBlue "
+            />
+            <div className="h-8">
+              <ErrorMessage errorObject={errors} target="email" />
+            </div>
+          </div>
 
-          <input
-            {...register('password')}
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Password"
-            className="p-4 border-2 focus:outline-semiBlue text-xl "
-          />
-          <ErrorMessage errorObject={errors} target="password" />
+          <div className="flex flex-col">
+            <input
+              {...register('password')}
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              className="p-4 border-2 focus:outline-semiBlue  "
+            />
+            <div className="h-8">
+              <ErrorMessage errorObject={errors} target="password" />
+            </div>
+          </div>
 
-          <input
-            {...register('confirmPassword')}
-            type="password"
-            name="confirmPassword"
-            id="confirmPassword"
-            placeholder="confirm password"
-            className="p-4 border-2 focus:outline-semiBlue text-xl "
-          />
-          <ErrorMessage errorObject={errors} target="confirmPassword" />
+          <div className="flex flex-col">
+            <input
+              {...register('confirmPassword')}
+              type="password"
+              name="confirmPassword"
+              id="confirmPassword"
+              placeholder="confirm password"
+              className="p-4 border-2 focus:outline-semiBlue  "
+            />
+            <div className="h-8">
+              <ErrorMessage errorObject={errors} target="confirmPassword" />
+            </div>
+          </div>
 
           <button
             className=" text-white bg-semiBlue px-8 py-3 font-lato font-normal   transition-all hover:rounded-3xl border-2 flex items-center justify-center gap-4 disabled:bg-gray-500 disabled:cursor-no-drop"

@@ -12,6 +12,10 @@ export type TLogInSchema = z.infer<typeof logInSchema>;
 export type TCheckOutSchema = z.infer<typeof checkOutSchema>;
 export type TContactSchema = z.infer<typeof contactSchema>;
 
+export type updatedFields = {
+  username: string;
+  password: string;
+};
 export type TProduct = {
   id: number;
   title: string;
