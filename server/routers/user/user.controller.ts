@@ -63,6 +63,7 @@ export async function logInUser(req: Request, res: Response) {
         httpOnly: true,
         sameSite: 'none',
         expires: new Date(Date.now() + 1000 * 60 * 60),
+        secure: true,
       });
 
       res.status(200).json({ success: true, user: userTryingToLogIn });
@@ -183,6 +184,7 @@ export function refrechToken(req: Request, res: Response, next: NextFunction) {
       res.cookie((user as decodedUserToken)._id, newGeneratedToken, {
         httpOnly: true,
         sameSite: 'none',
+        secure: true,
         expires: new Date(Date.now() + 1000 * 60 * 60),
       });
       (req as CustomRequest).id = (user as decodedUserToken)._id;
