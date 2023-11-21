@@ -56,6 +56,7 @@ const ProfilePage = () => {
 
   useEffect(() => {
     let timer: number;
+    console.log('use Effect Profile');
 
     async function fetchUserByCookie() {
       const user = await getUserByCookieAndToken(
@@ -72,7 +73,7 @@ const ProfilePage = () => {
       }
     }
 
-    async function refrechToken() {
+    async function refreshToken() {
       logIt('user refetched ! ');
       const user = await refrechUserToken(abortController.current.signal).catch(
         (err) => {
@@ -95,7 +96,7 @@ const ProfilePage = () => {
       logIt('setting the timer');
       timer = setInterval(() => {
         logIt('token refreshed');
-        refrechToken();
+        refreshToken();
       }, 1000 * 25);
     }
 

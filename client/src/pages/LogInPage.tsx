@@ -57,7 +57,7 @@ const LogInPage = () => {
   }
 
   return (
-    <div className="bg-lightWhite   flex  justify-center px-4">
+    <div className="bg-lightWhite md:h-[calc(100vh-126px)] flex  justify-center px-4">
       <form
         className="bg-white p-8 max-w-[500px] w-full shadow-lg my-16 h-fit rounded-lg border-2"
         onSubmit={handleSubmit(logIn)}
@@ -79,7 +79,7 @@ const LogInPage = () => {
             className="p-4 border-2 focus:outline-semiBlue text-xl"
           />
           <ErrorMessage errorObject={errors} target="email" />
-
+          <p className="text-gray-400">example email : example@gmail.com</p>
           <input
             {...register('password', {
               required: { value: true, message: ' password is required' },
@@ -91,7 +91,7 @@ const LogInPage = () => {
             className={'p-4 border-2 focus:outline-semiBlue text-xl '}
           />
           <ErrorMessage errorObject={errors} target="password" />
-
+          <p className="text-gray-400">example password : Example123456@</p>
           <button
             className=" text-white bg-semiBlue px-8 py-3 font-lato font-normal   transition-all hover:rounded-3xl border-2 flex items-center justify-center gap-4 disabled:bg-gray-500"
             disabled={isSubmitting || isLoading}
