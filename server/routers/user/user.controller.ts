@@ -61,7 +61,7 @@ export async function logInUser(req: Request, res: Response) {
       // set cookie
       res.cookie(String(userTryingToLogIn._id), token, {
         httpOnly: true,
-        sameSite: 'lax',
+        sameSite: 'none',
         expires: new Date(Date.now() + 1000 * 60 * 60),
       });
 
@@ -182,7 +182,7 @@ export function refrechToken(req: Request, res: Response, next: NextFunction) {
       res.clearCookie((user as decodedUserToken)._id);
       res.cookie((user as decodedUserToken)._id, newGeneratedToken, {
         httpOnly: true,
-        sameSite: 'lax',
+        sameSite: 'none',
         expires: new Date(Date.now() + 1000 * 60 * 60),
       });
       (req as CustomRequest).id = (user as decodedUserToken)._id;
