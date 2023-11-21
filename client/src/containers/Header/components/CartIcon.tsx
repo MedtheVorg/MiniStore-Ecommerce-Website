@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import { StoreType } from '../../../redux/reduxStore';
 import { useSelector } from 'react-redux';
 import { CartProduct } from '../../../lib/types';
 import { BiSolidCart } from 'react-icons/bi';
+import { StoreType } from '../../../reduxStore/store';
 
 const CartIcon = () => {
   const products: CartProduct[] = useSelector(

@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { StoreType } from '../../../redux/reduxStore';
+import { StoreType } from '../../../reduxStore/store';
 
 const CartTotal = () => {
   const cart = useSelector((state: StoreType) => state.cartState);

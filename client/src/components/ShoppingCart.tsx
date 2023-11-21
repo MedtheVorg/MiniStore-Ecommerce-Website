@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
 import { type CartProduct } from '../lib/types';
-import { StoreType } from '../redux/reduxStore';
 import { Link } from 'react-router-dom';
 import { BiSolidCart } from 'react-icons/bi';
+import { StoreType } from '../reduxStore/store';
 
 const ShoppingCart = () => {
   const products: CartProduct[] = useSelector(
