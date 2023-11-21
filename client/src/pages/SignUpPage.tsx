@@ -75,7 +75,7 @@ const SignUpPage = () => {
               name="username"
               id="username"
               placeholder="Username"
-              className="p-2 border-2 focus:outline-semiBlue "
+              className="p-4 border-2 focus:outline-semiBlue "
             />
             <div className="h-8">
               <ErrorMessage errorObject={errors} target="username" />
